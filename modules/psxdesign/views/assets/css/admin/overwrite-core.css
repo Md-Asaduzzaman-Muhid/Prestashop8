@@ -1,0 +1,22 @@
+.content-div {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.row + .row:before {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #bbcdd2;
+  margin: 1.375rem auto 2rem;
+  width: calc(100% - 1.875rem);
+}
+
+.tooltip-inner .material-icons {
+  font-size: inherit;
+  line-height: 1em;
+}
+
+.header-toolbar > .btn-floating {
+  display: none;
+}

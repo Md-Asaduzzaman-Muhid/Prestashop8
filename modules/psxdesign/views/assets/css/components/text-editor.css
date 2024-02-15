@@ -1,0 +1,55 @@
+.text-editor {
+  overflow: hidden;
+  border-radius: 0.25rem;
+  border: 1px solid #b3c7cd;
+}
+
+.text-editor__toolbar {
+  padding: 0.75rem;
+  background-color: #fafbfc;
+  border-bottom: 1px solid #b3c7cd;
+  display: flex;
+  gap: 0.5rem;
+}
+.text-editor__toolbar .form-group {
+  margin: 0;
+  flex: 1;
+}
+.text-editor__toolbar .form-group .form-select, .text-editor__toolbar .form-group input {
+  background: #ffffff;
+}
+.text-editor__toolbar .form-group.for-group--small {
+  flex: 0.5;
+}
+.text-editor__toolbar .form-group input:disabled {
+  background: #eaebec;
+}
+
+.text-editor__textarea {
+  background-color: #ffffff;
+  padding: 0.75rem;
+  min-height: clamp(4.125rem, 1.5em, 10em);
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  display: block;
+}
+.text-editor__textarea[rows="1"] {
+  white-space: nowrap;
+  line-height: 1em;
+  min-height: clamp(4.125rem, 1.5em, 1.5em);
+}
+
+.text-editor__font-color-input {
+  height: 39px;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #bbcdd2;
+  border-radius: 4px;
+  transition: border-color 0.15s ease-in-out;
+}
+.text-editor__font-color-input:focus, .text-editor__font-color-input:focus-visible {
+  outline: 0;
+  border-color: #7cd5e7;
+}

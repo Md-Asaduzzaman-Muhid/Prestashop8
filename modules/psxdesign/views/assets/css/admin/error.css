@@ -1,0 +1,7 @@
+.invalid-feedback a {
+  color: inherit;
+}
+
+.invalid-feedback .external-link::before {
+  font-size: 1.2em;
+}

@@ -1,0 +1,10 @@
+.btn .spinner {
+  color: unset;
+  background: transparent;
+  border-color: currentColor transparent transparent currentColor;
+  vertical-align: middle;
+  font-size: unset;
+  width: 1em;
+  height: 1em;
+  margin-right: 4px;
+}

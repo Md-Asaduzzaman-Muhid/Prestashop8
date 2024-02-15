@@ -1,0 +1,48 @@
+{#**
+ * Copyright since 2007 PrestaShop SA and Contributors
+ * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License version 3.0
+ * that is bundled with this package in the file LICENSE.md.
+ * It is also available through the world-wide-web at this URL:
+ * https://opensource.org/licenses/AFL-3.0
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@prestashop.com so we can send you a copy immediately.
+ *
+ * @author    PrestaShop SA and Contributors <contact@prestashop.com>
+ * @copyright Since 2007 PrestaShop SA and Contributors
+ * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License version 3.0
+ *#}
+{% extends '@Modules/psxdesign/views/templates/admin/themes/Blocks/Partials/theme_card_container.html.twig' %}
+
+{% block card_content %}
+    <article class="card d-flex justify-content-between align-items-stretch h-100" data-role="theme-card-container">
+        <header class="p-3 mb-auto">
+            <div class="d-flex justify-content-between align-items-start">
+                <h3 class="h4 mb-1 text-truncate">{{ theme.display_name }}</h3>
+            </div>
+            <span class="small-text text-muted d-block">
+                {{ 'v%version%'|trans({'%version%': theme.version}, 'Modules.Psxdesign.Admin') }} - 
+                {{ 'Developed by %author%'|trans({ 
+                    '%author%': theme['author']['url'] is defined 
+                        ? '<a href="' ~ theme['author']['url'] ~ '" target="_blank" rel="noopener">' ~ theme.author.name ~ '</a>'
+                        :  theme.author.name
+                }, 'Modules.Psxdesign.Admin')|striptags('<a>')|raw }}
+            </span>
+            {% if category is defined and category is not empty %}
+                <span class="badge badge-outlined-secondary mt-3">{{ category }}</span>
+            {% endif %}
+        </header>
+        <div class="px-3">
+            {% block image %}
+            {% endblock %}
+        </div>
+        <footer class="p-3 d-flex flex-wrap form-group inline-switch-widget mb-0">
+            {% block button_container %}
+            {% endblock %}
+        </footer>
+    </article>
+{% endblock %}

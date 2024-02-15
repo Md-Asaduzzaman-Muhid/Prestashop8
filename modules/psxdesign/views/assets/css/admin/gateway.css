@@ -1,0 +1,17 @@
+.gateway {
+  position: absolute;
+  z-index: 2;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  padding: 5px;
+}
+.gateway .card {
+  max-width: 400px;
+}
+
+.gateway--blur-background {
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}

@@ -1,0 +1,18 @@
+.psxdesign-notification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1rem;
+  height: 1rem;
+  margin-left: auto;
+  margin-right: 0.75rem;
+  border-radius: 50%;
+  color: #ffffff;
+  background: #f44336;
+  font-weight: 400;
+  font-size: 0.625rem;
+  line-height: 1.125rem;
+}
+.psxdesign-notification ~ .material-icons.sub-tabs-arrow {
+  margin-left: 0 !important;
+}
